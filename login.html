@@ -1,18 +1,20 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8"/>
         <title>Netflix</title>
+        <link href="css/login.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
     </head>
 
     <body>
         <div class="content">
-            <div id="login">
+            <div class="login">
                 <h1>Sign In</h1>
-                <input type="text" placeholder="Email or phone number">
-                <input type="password" placeholder="Password">
-
+                <input id="username" type="text" placeholder="Email or username"> <br>
+                <input id="password" type="password" placeholder="Password"> <br>
+                <button id="btnLogin"> Login </button>
             </div>
         </div>
-    </body>    
+    </body>
 </html>
