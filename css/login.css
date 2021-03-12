@@ -1,15 +1,36 @@
-.body{
-    margin: 0;
+
+.login-box {
+    padding: 0px 60px 0px 60px;
+    width: 320px;
+    height: 650px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: arial;
 }
 
-.content{
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.200);
-    width: 100%;
-    height: 100%;
+.login-box h1 {
+    color: #fff;
+    font-size: 32px;
+    margin: 50px 0px 35px 0px;
 }
 
-.login{
+.login-box input {
     width: 100%;
-    height: 100%;
+    height: 50px;
+    margin-bottom: 14px;
+    border: none;
+    border-radius: 6px;
+}
+
+.login-box button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 100%;
+    height: 48px;
+    
 }
