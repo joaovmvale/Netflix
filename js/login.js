@@ -21,7 +21,7 @@ function fLocalComunicaServidor(){
         dataType: "json",
         url: "php/enviar.php",
         data: {
-            nome: $("#username").val();
+            nome: $("#username").val(),
             password: $("#password").val()
         },
         sucess: function(retorno){}
