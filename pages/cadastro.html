@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="../css/patterns.css">
         <link rel="stylesheet" href="../css/cadastro.css">
         <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+        <script src='../js/jquery.md5.js'></script>
+        <script src='../js/sjcl.js'></script>
         <script type="text/javascript" src="../js/cadastro.js"></script>
     </head>
     <body>
@@ -18,25 +20,26 @@
 
         <div class="content">
 
-            <div class="form">
+            <form method="POST" class="form">
                                 
-                <p class="passo">PASSO 1 DE 3</p>
+                <p class="passo">PASSO <b>1</b> DE <b>3</b></p>
                 <p class="titulo">Crie uma senha para iniciar sua <br> assinatura.</p>
                 <p class="subtitulo">Faltam só mais alguns passos! <br>
                 Nós também detestamos formulários.</p>
-                <input id="cadNome" type="text" placeholder="Nome"> <br>
-                <input id="cadNasc" type="text" placeholder="Data de nascimento"> <br>
-                <input id="cadMail" type="text" placeholder="E-mail"> <br>
-                <input id="cadSenha" type="password" placeholder="Senha"> <br>
-                <input id="cadConfSenha" type="password" placeholder="Confirmar Senha"> <br>
-                <input id="cadNroCartao" type="text" placeholder="Número do cartão"> <br>
-                <input id="cadVldCartao" type="text" placeholder="Validade do cartão"> <br>
-                <input id="cadCodCartao" type="text" placeholder="Código de segurança do cartão"> <br>
-                <input id="cadNomeCartao" type="text" placeholder="Nome do titular do cartão"> <br>
-                <input id="cadCpfCnpj" type="text" placeholder="CPF/CNPJ">
-                <button onclick="window.location.href='../pages/preplans.html'">Continuar</button>
+                <input name="nome" id="cadNome" type="text" placeholder="Nome"> <br>
+                <input name="cadNasc" id="cadNasc" type="text" placeholder="Data de nascimento"> <br>
+                <input name="cadMail" id="cadMail" type="text" placeholder="E-mail"> <br>
+                <input name="cadSenha" id="cadSenha" type="password" placeholder="Senha"> <br>
+                <input name="cadConfSenha" id="cadConfSenha" type="password" placeholder="Confirmar Senha"> <br>
+                <input name="cadNroCartao" id="cadNroCartao" type="text" placeholder="Número do cartão"> <br>
+                <input name="cadVldCartao" id="cadVldCartao" type="text" placeholder="Validade do cartão"> <br>
+                <input name="cadCodCartao" id="cadCodCartao" type="text" placeholder="Código de segurança do cartão"> <br>
+                <input name="cadNomeCartao" id="cadNomeCartao" type="text" placeholder="Nome do titular do cartão"> <br>
+                <input name="cadCpfCnpj" id="cadCpfCnpj" type="text" placeholder="CPF/CNPJ">
+                <button id="btnCadastrar" type="submit">Continuar</button>
+                <!-- onclick="window.location.href='../pages/preplans.html'" -->
 
-            </div>
+            </form>
         </div>
     </body>
 
