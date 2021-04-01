@@ -1,15 +1,9 @@
 <?php
-
-define('DB_SERVER', '127.0.0.1:3307');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_NAME', 'pucpr');
  
-
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$con = mysqli_connect("localhost:3307", "root", "root", "netflix");
  
 // Check connection
-if($link === false){
+if($con === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 ?>

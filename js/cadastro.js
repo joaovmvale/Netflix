@@ -1,34 +1,23 @@
 $(document).ready(function(){
 
     fCadastrar();
-    fEnviarEmail();
+    fLocalComunicaServidor();
 	
 });
 
 function fCadastrar(){
 
     $("#btnCadastrar").click(function(){
-		
-		//var senha_hash_md5 = $.MD5($('#cadSenha').val());
-
-		var myBitArray = sjcl.hash.sha256.hash($('#cadSenha').val());
-		var senha_hash_sha256 = sjcl.codec.hex.fromBits(myBitArray);
-
-		//alert(senha_hash_md5);
-		alert(senha_hash_sha256);
-
-        cadMail =$("#cadMail").val()
-        cadSenha = $("#cadSenha").val()
-
-        alert(cadMail)
-        alert(cadSenha)
 
 		return false;
 	});
 
 }
 
-function fEnviarEmail(){
+function fLocalComunicaServidor(){
+
+    var myBitArray = sjcl.hash.sha256.hash($('#cadSenha').val());
+	var senha_hash_sha256 = sjcl.codec.hex.fromBits(myBitArray);
 
     $("#btnCadastrar").click(function(){
 
@@ -39,10 +28,20 @@ function fEnviarEmail(){
             data: {
                 email: $("#cadMail").val(),
             },
-            sucess: function(retorno){}
+            success: function(retorno){}
         })
 
-        location.href = "../php/conexao-bd.php"
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "../php/email-confirmacao.php",
+            data: {
+                email: $("#cadMail").val(),
+                senha: senha_hash_sha256,
+            },
+            success: function(retorno){}
+        })
 
+        return false;
     });
 }
