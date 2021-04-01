@@ -17,6 +17,12 @@ function fCadastrar(){
 		//alert(senha_hash_md5);
 		alert(senha_hash_sha256);
 
+        cadMail =$("#cadMail").val()
+        cadSenha = $("#cadSenha").val()
+
+        alert(cadMail)
+        alert(cadSenha)
+
 		return false;
 	});
 
@@ -35,6 +41,8 @@ function fEnviarEmail(){
             },
             sucess: function(retorno){}
         })
+
+        location.href = "../php/conexao-bd.php"
 
     });
 }
