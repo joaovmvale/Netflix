@@ -1,3 +1,30 @@
+<?php
+
+if(isset($_POST['submit'])){
+    $mysqli = NEW MySQLI("127.0.0.1:3307", "root", "root", "netflix");
+
+    $u = $mysqli->real_escape_string($_POST['username']);
+    $p = $mysqli->real_escape_string(['password']);
+    $p = md5($p);
+
+    $resultSet = $mysqli->query("SELECT * FROM usuarios_pendentes WHERE email = '$u' AND senha = '$p' LIMIT 1");
+
+    if($resultSet->num_rows != 0){
+        $row = $resultSet-> fetch_assoc();
+        $ativado = $row['ativado'];
+
+        if($ativado == 1){
+            echo "FUNCIONOU";
+        }else{
+            echo "NAO FUNCIONOU";
+        }
+    }else{
+        echo "SEI LA";
+    }
+}
+
+?>
+
 <html>
     <head>
         <meta charset="UTF-8"/>
@@ -15,10 +42,12 @@
         </header>
 
         <div class="login-box">
+            <form method="POST">
             <h1>Entrar</h1>
-            <input class="entradas" id="username" type="text" placeholder="Email ou número de telefone"> <br>
-            <input class="entradas" id="password" type="password" placeholder="Senha"> <br>
-            <button id="btnLogin">Entrar</button>
+            <input class="entradas" name="username" id="username" type="text" placeholder="Email ou número de telefone"> <br>
+            <input class="entradas" name="password" id="password" type="password" placeholder="Senha"> <br>
+            <!-- <button id="btnLogin" type="submit">Entrar</button> -->
+            <input type="SUBMIT" name="submit" value="Entrar" required/>
             <div class="loginBox-footer">
                 <input id="rememberPassword" type="checkbox">
                 <span>Lembre-se de mim</span>
@@ -29,6 +58,7 @@
                     <a href="../pages/cadastro.html"> <span id="cadastro">Assine agora</span> </a>
                 </div>
             </div>
+            </form>
         </div>
 
         <footer>

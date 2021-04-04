@@ -1,47 +1,23 @@
 $(document).ready(function(){
 
-    fCadastrar();
     fLocalComunicaServidor();
 	
 });
 
-function fCadastrar(){
-
-    $("#btnCadastrar").click(function(){
-
-		return false;
-	});
-
-}
-
 function fLocalComunicaServidor(){
-
-    var myBitArray = sjcl.hash.sha256.hash($('#cadSenha').val());
-	var senha_hash_sha256 = sjcl.codec.hex.fromBits(myBitArray);
-
     $("#btnCadastrar").click(function(){
-
+        var senha_hash_md5 = $.MD5($("#cadSenha").val());
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "../php/enviar-email.php",
+            url: "../pages/email-confirmacao.php",
             data: {
                 email: $("#cadMail").val(),
+                senha: senha_hash_md5,
             },
             success: function(retorno){}
         })
-
-        $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: "../php/email-confirmacao.php",
-            data: {
-                email: $("#cadMail").val(),
-                senha: senha_hash_sha256,
-            },
-            success: function(retorno){}
-        })
-
+        location.href="../pages/cadastroEnviado.html";
         return false;
     });
 }
