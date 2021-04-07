@@ -1,6 +1,23 @@
 <?php
-$con = mysqli_connect("127.0.0.1:3307", "root", "root", "netflix");
+    session_start();
 
+    if(isset($_POST['submit'])){
+    $con = mysqli_connect("127.0.0.1:3307", "root", "root", "netflix");
+
+    $us = $_SESSION['us'];
+    $ps = $_SESSION['ps'];
+
+    $nome = $_POST['nome'];
+    $cadNasc = $_POST['cadNasc'];
+    $cadNroCartao = $_POST['cadNroCartao'];
+    $cadVldCartao = $_POST['cadVldCartao'];
+    $cadCodCartao = $_POST['cadCodCartao'];
+    $cadNomeCartao = $_POST['cadNomeCartao'];
+    $cadCpfCnpj = $_POST['cadCpfCnpj'];
+    
+    $keuri = mysqli_query($con,"INSERT INTO usuarios (nome, cadNasc, cadMail, cadSenha, cadNroCartao, cadVldCartao, cadCodCartao, cadNomeCartao, cadCpfCnpj) VALUES('$nome', '$cadNasc', '$us', '$ps', '$cadNroCartao', '$cadVldCartao', '$cadCodCartao', '$cadNomeCartao', '$cadCpfCnpj')");
+    
+    }
 ?>
 
 <html>
@@ -12,7 +29,6 @@ $con = mysqli_connect("127.0.0.1:3307", "root", "root", "netflix");
         <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
         <script src='../js/jquery.md5.js'></script>
         <script src='../js/sjcl.js'></script>
-        <script type="text/javascript" src="../js/cadastro.js"></script>
     </head>
     <body>
         
@@ -37,7 +53,7 @@ $con = mysqli_connect("127.0.0.1:3307", "root", "root", "netflix");
                 <input name="cadCodCartao" id="cadCodCartao" type="text" placeholder="Código de segurança do cartão"> <br>
                 <input name="cadNomeCartao" id="cadNomeCartao" type="text" placeholder="Nome do titular do cartão"> <br>
                 <input name="cadCpfCnpj" id="cadCpfCnpj" type="text" placeholder="CPF/CNPJ">
-                <button class="botao1" id="btnCadastrar" type="submit">Continuar</button>
+                <input class="botao1" type="SUBMIT" name="submit" value="Continuar" required/>
 
             </form>
         </div>

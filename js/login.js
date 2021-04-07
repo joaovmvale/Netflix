@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
     fLocalComunicaServidor();
 	
@@ -13,14 +13,13 @@ function fLocalComunicaServidor(){
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "../pages/loginVerifica.php",
+            url: "../pages/cadastroOk.php",
             data: {
                 email: $("#username").val(),
                 senha: senha_hash_sha256,
             },
             success: function(retorno){}
         })
-        location.href="../pages/loginVerifica.php";
         return false;
     });
-}
+}*/

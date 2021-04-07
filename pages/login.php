@@ -1,25 +1,45 @@
 <?php
 if(isset($_POST['submit'])){
+    session_start();
+
     $mysqli = NEW MySQLI("127.0.0.1:3307", "root", "root", "netflix");
 
     $u = $mysqli->real_escape_string($_POST['username']);
     $p = $mysqli->real_escape_string($_POST['password']);
     $p = md5($p);
 
+    $_SESSION['us'] = $u;
+    $_SESSION['ps'] = $p;
+
     $resultSet = $mysqli->query("SELECT * FROM usuarios_pendentes WHERE email = '$u' AND senha = '$p' LIMIT 1");
 
+    $resultSet1 = $mysqli->query("SELECT * FROM usuarios WHERE cadMail = '$u' AND cadSenha = '$p' LIMIT 1");
+
+    if(mysqli_num_rows($resultSet1) != 0){
+        $row = $resultSet1 -> fetch_assoc();
+        $verMail = $row['cadMail'];
+        $verSenha = $row['cadSenha'];
+
+        if($u == $verMail && $p == $verSenha){
+            header("Location: home.html");
+            die();
+        }
+    }
+    
     if(mysqli_num_rows($resultSet) != 0){ 
         $row = $resultSet-> fetch_assoc();
         $ativado = $row['ativado'];
-
+        
         if($ativado == 0){
-            echo '<span style="background-color: black;color: white;">VOCE PRECISA ATIVAR SUA CONTA</span>';
+            header("Location: cadastroenviado.html");
+            die();
         }else{
-            echo '<span style="background-color: black;color: white;">VOCE PRECISA TERMINAR SUA ASSINATURA</span>';
+            header("Location: cadastrook.php");
+            die();
         }
     }else{
-        echo '<span style="background-color: black;color: white;">USUARIO E/OU SENHA INCORRETO(S)</span>';
-
+        header("Location: cadastro.html");
+        die();
     }
 }
 
