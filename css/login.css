@@ -62,6 +62,10 @@ header img {
     margin-top: 20px;
 }
 
+.botao1:hover{
+    cursor: pointer;
+}
+
 .login-box button:hover{
     cursor: pointer;
 }

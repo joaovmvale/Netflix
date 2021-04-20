@@ -66,7 +66,6 @@ if(isset($_POST['submit'])){
                 <h1>Entrar</h1>
                 <input class="entradas" name="username" id="username" type="text" placeholder="Email ou número de telefone"> <br>
                 <input class="entradas" name="password" id="password" type="password" placeholder="Senha"> <br>
-                <!-- <button class="botao1" id="btnLogin" type="submit">Entrar</button> -->
                 <input class="botao1" type="SUBMIT" name="submit" value="Entrar" required/>
                 <div class="loginBox-footer">
                     <input id="rememberPassword" type="checkbox">
