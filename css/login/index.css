@@ -1,0 +1,135 @@
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../images/loginBackground.jpg');
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+header img {
+    width: 170px;
+    padding-left: 55px;
+    padding-top: 30px;
+
+}
+
+.login-box {
+    padding: 0px 60px 0px 60px;
+    width: 320px;
+    height: 650px;
+    background-color: rgba(0, 0, 0, 0.800);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3px;
+}
+
+.login-box h1 {
+    color: #fff;
+    font-size: 32px;
+    margin: 50px 0px 35px 0px;
+}
+
+.entradas {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 14px;
+    padding: 20px;
+    border: none;
+    border-radius: 6px;
+}
+
+.botao1 {
+    width: 100%;
+    height: 54px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    margin-top: 20px;
+}
+
+.botao1:hover{
+    cursor: pointer;
+}
+
+.login-box button:hover{
+    cursor: pointer;
+}
+
+.loginbox-footer{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    color: rgb(167, 167, 167);
+}
+
+.loginbox-footer span{
+    font-size: 13px;
+}
+
+#ajuda{
+    margin-top: 10px;
+    color: rgb(167, 167, 167);
+    float: right;
+}
+
+#rememberPassword{
+    margin-top: 10px;
+}
+
+.div-cadastro{
+    margin-top: 60px
+}
+
+.div-cadastro span{
+    font-size: 16px;
+}
+
+#cadastro{
+    color: white;
+}
+
+#cadastro:link{
+    text-decoration: none;
+}
+
+#cadastro:visited{
+    text-decoration: none;
+}
+
+#cadastro:hover{
+    text-decoration: underline;
+}
+
+#cadastro:active{
+    text-decoration: underline;
+}
+
+#ajuda:link{
+    text-decoration: none;
+}
+
+#ajuda:visited{
+    text-decoration: none;
+}
+
+#ajuda:hover{
+    text-decoration: underline;
+}
+
+#ajuda:active{
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 900px;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.800);
+    width: 100%;
+    height: 325px;
+}
