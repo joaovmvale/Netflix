@@ -16,7 +16,6 @@ $(document).ready(function(){
 });
 
 function fLocalComunicaServidor(formulario, arquivo){
-
 	var dados = $("#"+formulario).serialize();
 
 	$.ajax({

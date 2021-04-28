@@ -1,0 +1,226 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #141414;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  padding: 0px 60px 0px 60px;
+  background-color: black;
+  display: flex;
+  align-content: space-around;
+}
+
+.movieCard{
+  position: relative;
+  width: 420px;
+  height: 375px;
+  background-color: red;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.048)
+}
+
+.movieCardData {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 170px;
+  background-color: #181818;
+  border-radius: 0 0 8px 8px;
+}
+
+.movieCardButton {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movieCardInfo p{
+  margin: 0 0 20px 20px;
+}
+
+.generos{
+  color: white;
+  font-size: 18px;
+}
+
+li {
+  list-style-type: circle;
+}
+
+.logo {
+  width: 92px;
+  align-self: center;
+  margin-right: 35px;
+
+}
+
+.menu {
+  align-self: center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px;
+}
+
+a:link {
+  color: #e5e5e5;
+}
+
+a:visited {
+  color: #e5e5e5;
+}
+
+button {
+  background-color: red;
+  border: none;
+  padding: 0;
+}
+
+.movieInfo {
+  background-color: gray;
+  width: 975px;
+  height: 100%;
+  margin-top: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5%;
+}
+
+.teaser {
+  background-color: #181818;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 525px;
+  border-radius: 0.5% 0.5% 0 0;
+  position: relative;
+}
+
+.teaser img {
+  width: 375px;
+  margin-top: 260px;
+  margin-left: 40px;
+}
+
+.buttonDiv {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 50px 50px;
+  z-index: 2;
+}
+
+.buttonDiv i {
+  font-size: 20px;
+}
+
+.bClose {
+  float: right;
+  margin: 25px;
+}
+
+.bClose i {
+  font-size: 20px;
+}
+
+.bPlay {
+  width: 175px;
+  height: 40px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 700px;
+  padding-left: 40px;
+  background-color: white;
+}
+
+.bPlay:hover{
+  background-color: #E6E6E6;
+  cursor: pointer;
+}
+
+.bPlay i {
+  margin-right: 15px;
+}
+
+.bCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.300);
+  color: white;
+  border: 2px solid #93928F;
+}
+
+.bCircle:hover {
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+
+.gradient {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(rgba(255, 255, 255, 0), #181818);
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+  z-index: 1;
+}
+
+.info {
+  background-color: #181818;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-content: space-around;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.info p, span {
+  color: white;
+}
+
+.info1 {
+  font-weight: 500;
+  width: calc((100%/3)*2);
+  height: 100%;
+  font-size: 18px;
+  padding-right: 20px;
+}
+
+.info1 div {
+  margin-bottom: 15px;
+}
+
+.info2 {
+  font-weight: 500;
+  width: calc((100%/3));
+  height: 100%;
+  font-size: 14px;
+  display: inline;
+}
+
+.info2 p:nth-child(1) {
+  margin-top: 0;
+}
+
+.info2 span {
+  color: #777;
+  font-weight: 300;
+}
+
+#relevancia {
+  color: #46d369;
+}
+
+#sinopse {
+  line-height: 24px;
+  font-size: 20px;
+} 
