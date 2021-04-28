@@ -14,4 +14,8 @@
     $altCod = mysqli_query($con, "UPDATE usuarios SET cadCodCartao = '$cadCodCartao' WHERE cadMail = '$email'");
     $altNome = mysqli_query($con, "UPDATE usuarios SET cadNomeCartao = '$cadNomeCartao' WHERE cadMail = '$email'");
 
+    $retorno["funcao"] = "retorno";
+    $retorno["mensagem"] = "Dados alterados!";
+
+    echo json_encode($retorno);
 ?>

@@ -5,18 +5,35 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Netflix</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='stylesheet' href='../../css/'>
+        <link rel="stylesheet" href="../../css/alterarDados/index.css">
         <script type='text/javascript' src='../../js/libraries/jquery-3.3.1.js'></script>
         <script src='../../js/alterarDados/index.js'></script>
     </head>
     <body>
-        <h1>ALTERAR DADOS DO CARTAO</h1>
+        <header>
+            <a href="."><img class="logo" src="../../images/index-logo.png" alt="logo-netflix"></a>
+            <div class="menu">
+                <a href="">Início</a>
+                <a href="">Séries</a>
+                <a href="">Filmes</a>
+                <a href="">Bombando</a>
+                <a href="">Minha Lista</a>
+            </div>
+            <div class="dropdown">
+                <button type="image" class="dropbtn"></button>
+                <div class="dropdown-content">
+                  <a href="../alterarDados">Trocar cartão</a>
+                  <a href="../../php/logout.php">Sair</a>
+                </div>
+            </div>
+        </header>
+
         <form id="form-altCadastro">
             <input placeholder='Digite o numero do cartao' type='text' name='cadNroCartao' id='cadNroCartao'/> <br>
             <input placeholder='Digite a validade do cartao' type='text' name='cadVldCartao' id='cadVldCartao'/> <br>
             <input placeholder='Digite o codigo de segurança do cartao' type='text' name='cadCodCartao' id='cadCodCartao'/> <br>
             <input placeholder='Digite o nome que aparece no cartão' type='text' name='cadNomeCartao' id='cadNomeCartao'/> <br>
-            <button id='bContinuar'>Continuar</button>
+            <button id='bContinuar'>Alterar Dados</button>
         </form>
     </body>
 </html>

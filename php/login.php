@@ -23,7 +23,7 @@
         $_SESSION["usuario"] = $registro["cadMail"];
         $_SESSION["id"] = session_id();
         $_SESSION["inicio"] = time();
-        $_SESSION["tempolimite"] = 120;
+        $_SESSION["tempolimite"] = 1000;
 
         $retorno["status"] = "logar";
         $retorno["mensagem"] = "Logado!";

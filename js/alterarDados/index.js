@@ -40,7 +40,12 @@ function fLocalComunicaServidor(formulario, arquivo){
 		dataType: "json",
 		url: "../../php/" + arquivo + ".php",
 		data: dados,
-		success: function(retorno){}
+		success: function(retorno){
+			if(retorno.funcao == "retorno"){
+				alert(retorno.mensagem);
+				window.location.href = "../logado";
+			}
+		}
 		
 	});
 }
