@@ -1,11 +1,9 @@
 <?php
-    session_start();
-
     require "config.php";
 
     $email = $_POST["email"];
 
-    $_SESSION['mail'] = $email;
+    $chave = md5(time().$email);
 
     $recoverPass = mysqli_query($con, "SELECT cadMail FROM usuarios WHERE cadMail = '$email'");
     $row = mysqli_fetch_row($recoverPass);
@@ -23,9 +21,8 @@
 
         $tituloEmail = "Netflix - Recuperação de senha";
 
-        $message = "<h1>Ficamos felizes com o seu cadastro!</h1><br>
-		Para concluir o seu cadastro, <strong>clique</strong> no link abaixo:<br>
-		<a href='http://www.youtube.com'>RECUPERAÇÃO DE SENHA</a>";
+        $message = "<h2>Para recuperar a senha utilize o código abaixo:</h2>
+		<strong>$chave</strong>";
 
         $mail= new PHPMailer;
         $mail->IsSMTP(); 
@@ -42,6 +39,8 @@
         $mail->Subject = $tituloEmail;
         $mail->msgHTML($message);
         $mail->send();
+
+        $token = mysqli_query($con, "INSERT INTO usuarios_recupera (email, token) VALUES ('$email','$chave')");
     }else if (mysqli_num_rows($complete) > 0){
         $retorno["status"] = "completar";
         $retorno["mensagem"] = "Complete o seu cadastro";

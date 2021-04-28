@@ -29,16 +29,19 @@ function fLocalComunicaServidor(formulario, arquivo){
 			{
                 if (retorno.status == "verificar"){
                     alert(retorno.mensagem);
-                    window.location.href = "../registerConf/";
+                    window.location.href = "../registerConf";
                 }else if (retorno.status == "cadastrar"){
                     alert(retorno.mensagem);
-                    window.location.href = "../register/";
+                    window.location.href = "../register";
                 }else if(retorno.status == "continuar"){
                     alert(retorno.mensagem);
                     window.location.href = "../registerComp/";
                 }else if (retorno.status == "logar"){
-                    window.location.href = "../../index.html";
-                }
+                    window.location.href = "../logado";
+                }else if (retorno.status == "senha"){
+					alert(retorno.mensagem);
+					window.location.reload();
+				}
 			}
 		}
 		
