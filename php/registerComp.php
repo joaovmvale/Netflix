@@ -11,7 +11,7 @@
 
     $senha = $row[0];
 
-    $nome = $_POST['nome'];
+    $nome = $_POST['name'];
     $cadNasc = $_POST['cadNasc'];
     $cadNroCartao = $_POST['cadNroCartao'];
     $cadVldCartao = $_POST['cadVldCartao'];
