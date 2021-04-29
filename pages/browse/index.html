@@ -1,0 +1,91 @@
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="../../css/browse/index.css">
+        <link rel="stylesheet" href="../../css/browse/carousel.css">
+        <script src="../../js/libraries/jquery-3.3.1.js"></script>
+        <script src="../../js/browse/index.js"></script>
+        <script src="../../js/browse/carousel.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <img class="logo" src="../../images/index-logo.png" alt="Logo Netflix">
+            <div class="menu">
+                <a href="">Início</a>
+                <a href="">Séries</a>
+                <a href="">Filmes</a>
+                <a href="">Bombando</a>
+                <a href="">Minha Lista</a>
+            </div>
+        </header>
+
+        <button id="mudar" movieid="1">MUDAR</button>
+
+        <div class="movieCard">
+             <div class="movieCardData">
+                <div class="movieCardButton">
+                    <div>
+                        <button class="bCircle"><i class="fa fa-play"></i></button>
+                        <button class="bCircle"><i class="fa fa-plus"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                    <button class="bCircle bCircle-info"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="movieCardInfo">
+                    <p>
+                        <span id="relevancia">98% relevante</span>
+                        <span>14</span>
+                        <span>1h 30min</span>
+                    </p>
+                    <p class="generos">
+                        <span>Categoria 1</span>
+                        &#8226;
+                        <span>Categoria 2</span>
+                        &#8226;
+                        <span>Categoria 3</span>
+                    </p>
+                </div>
+             </div>
+        </div>
+        
+        <div class="movieInfo" style="display: none;">
+            <div class="teaser" id="">
+                <button class="bCircle bClose"><i class="fas fa-times"></i></button>
+                <img id="titulo">
+                <div class="buttonDiv">
+                    <button class="bPlay"><i class="fa fa-play"></i>Assistir</button>
+                    <button class="bCircle"><i class="fa fa-plus"></i></button>
+                    <button class="bCircle"><i class="fa fa-thumbs-up"></i></button>
+                    <button class="bCircle"><i class="fa fa-thumbs-down"></i></button>
+                </div>
+                <div class="gradient"></div>
+            </div>
+            <div class="info">
+                <span id="titulo" name="titulo"></span>
+                <div class="info1">
+                    <div class="principal">
+                        <span id="relevancia" name="relevancia"><!--RELEVANCIA--></span>
+                        <span id="ano" name="ano"><!--ANO--></span>
+                        <span id="classIndicativa" name="classIndicativa"><!--IDADE--></span>
+                        <span id="duracao" name="duracao"><!--DURACAO--></span>
+                    </div>
+
+                    <span id="sinopse" name="sinopse"><!--SINOPSE--></span>
+
+                </div>
+                <div class="info2">
+                    <p id="elenco" name="elenco"><!--ELENCO--></p>
+                    <p id="genero" name="genero"><span><!--GENERO--></p>
+                    <p id="cenas" name="cenas"><!--CENAS--></p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
