@@ -13,14 +13,34 @@ header {
   align-content: space-around;
 }
 
+.content {
+  padding: 10px;
+}
+
+.content .movieCard{
+  display: inline-block
+}
+
 .movieCard{
+  z-index: 1;
   position: relative;
   width: 420px;
-  height: 375px;
+  height: 400px;
   background-color: red;
   border-radius: 8px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.048)
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.048);
+  margin: 10px;
 }
+
+.movieImage {
+  border-radius: 8px 8px 0 0;
+  height: 60%;
+  background-color: blue;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
 
 .movieCardData {
   position: absolute;
@@ -76,21 +96,17 @@ a:visited {
   color: #e5e5e5;
 }
 
-button {
-  background-color: red;
-  border: none;
-  padding: 0;
-}
-
 .movieInfo {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  border-radius: 0.5%;
   background-color: gray;
   width: 975px;
   height: 100%;
   margin-top: 25px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 0.5%;
 }
 
 .teaser {
@@ -103,25 +119,40 @@ button {
   position: relative;
 }
 
-.teaser img {
-  width: 375px;
-  margin-top: 260px;
-  margin-left: 40px;
+.trailer {
+  position: absolute;
 }
 
-.buttonDiv {
+.teaser img {
+  width: 375px;
+  position: absolute;
+  left: 0;
+  margin-top: 250px;
+  margin-left: 0px;
+  z-index: 2;
+}
+
+.movieControl {
+  height: 500px;
+  width: 500px;
+}
+
+.movieButtons {
   position: absolute;
   bottom: 0;
   margin: 0 0 50px 50px;
   z-index: 2;
 }
 
-.buttonDiv i {
+.movieButtons i {
   font-size: 20px;
 }
 
+
 .bClose {
-  float: right;
+  position: absolute;
+  z-index: 2;
+  right: 0;
   margin: 25px;
 }
 
@@ -216,7 +247,7 @@ button {
   font-weight: 300;
 }
 
-#relevancia {
+.relevancia {
   color: #46d369;
 }
 
