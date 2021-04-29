@@ -37,7 +37,7 @@ function fLocalComunicaServidor(formulario, arquivo){
                     alert(retorno.mensagem);
                     window.location.href = "../registerComp/";
                 }else if (retorno.status == "logar"){
-                    window.location.href = "../logado";
+                    window.location.href = "../browse";
                 }else if (retorno.status == "senha"){
 					alert(retorno.mensagem);
 					window.location.reload();

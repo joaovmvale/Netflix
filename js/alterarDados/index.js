@@ -43,7 +43,7 @@ function fLocalComunicaServidor(formulario, arquivo){
 		success: function(retorno){
 			if(retorno.funcao == "retorno"){
 				alert(retorno.mensagem);
-				window.location.href = "../logado";
+				window.location.href = "../browse";
 			}
 		}
 		

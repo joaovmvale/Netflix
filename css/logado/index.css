@@ -251,7 +251,7 @@ body {
     margin-top: 10px;
     display: none;
     position: absolute;
-    background-color: #f9f9f9bd;
+    background-color: #363333;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -266,7 +266,7 @@ body {
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
+  .dropdown-content a:hover {background-color: #acacac}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
