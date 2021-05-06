@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: arial;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.botao {
+    background-color: #e50914;
+    color: #fff;
+    padding: 0;
+    border: none;
+}
+
+.botao:hover {
+    background-color: #F40612;
+    cursor: pointer;
+}
+
+.entrada {
+    padding: 20px;
+    border: none;
+}

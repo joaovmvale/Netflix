@@ -249,9 +249,10 @@ body {
   .dropdown-content {
     margin-left: 900px;
     margin-top: 10px;
+    background: url(../images/profile.jpg);
     display: none;
     position: absolute;
-    background-color: #363333;
+    background-color: #f9f9f9bd;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -266,7 +267,7 @@ body {
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #acacac}
+  .dropdown-content a:hover {background-color: #f1f1f1}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
@@ -277,3 +278,38 @@ body {
   .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   }
+
+  #form-altCadastro {
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8%;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+  #form-altCadastro input{
+    border-radius: 3px;
+    border: 1px solid darkgray;
+    width: 90%;
+    height: 20px;
+    margin-bottom: 5px;
+    padding: 20px;
+}
+
+#bContinuar {
+    width: 100%;
+    height: 54px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+}
+
+#bContinuar:hover{
+    cursor: pointer;
+}
