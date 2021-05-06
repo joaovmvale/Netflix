@@ -8,28 +8,71 @@
         <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
         <script type="text/javascript" src="../js/index.js"></script>
     </head>
+
     <body>
         <header>
-            <img src="img/netflix-logo.png" alt="netflix-logo">
+            <a href="."><img class="logo" src="images/index-logo.png" alt="logo-netflix"></a>
             <div class="entrar">
                 <select name="" id="">
                     <option value="valor1">Português</option>
                     <option value="valor2">English</option>
                 </select>
-                <button>Entrar</button>
+                <button class="botao" onclick="window.location.href='pages/login/'">Entrar</button>
             </div>
 
             <div class="central-info">
                 <span class="titulo">Filmes, séries e muito mais. Sem limites.</span> <br>
                 <span class="subtitulo">Assista onde quiser. Cancele quando quiser </span> <br>
+                <span class="cadastro-info">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</span> <br>
                 <div class="cadastro">
-                    <span class="cadastro-info">Pronto para assistir? Informe seu email <br> para criar ou reiniciar sua assinatura.</span> <br>
-                    <input type="text" placeholder="Email">
-                    <button>Vamos lá ></button>
+                    <input class="entrada entrada-cadastro" type="text" placeholder="Email">
+                    <button class="botao botao-cadastro" onclick="window.location.href='pages/register'">Vamos lá ></button>
                 </div>
             </div>
         </header>
-        <div></div>
+
+        <div class="info-box">
+            <div>
+                <span class="info-titulo">Aproveite na TV.</span><br>
+                <span class="info-subtitulo">Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</span>
+            </div>
+            <div>
+                <video src="videos/video-amostra.m4v"></video>
+                <img src="images/tv-amostra.png" alt="">
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div>
+                <img src="images/bagulhos-estranhos.png" alt="">
+            </div>
+            <div>
+                <span class="info-titulo">Baixe séries para assistir offline.</span><br>
+                <span class="info-subtitulo">Salve seus títulos favoritos e sempre tenha algo para assistir.</span>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div>
+                <span class="info-titulo">Assista quando quiser.</span><br>
+                <span class="info-subtitulo">Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso.</span>
+            </div>
+            <div>
+                <img src="images/device-pile.png" alt="">
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div>
+                <span class="info-titulo">Perguntas frequentes</span><br>
+                <span class="info-subtitulo">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</span>
+                <input class="entrada entrada-cadastro" type="text">
+                <button class="botao botao-cadastro" onclick="window.location.href='pages/register'">Vamos lá ></button>
+            </div>
+        </div>
+
+
         <footer></footer>
     </body>
+
 </html>

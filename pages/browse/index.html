@@ -1,0 +1,201 @@
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Netflix</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel='stylesheet' href='../../css/patterns.css'>
+        <link rel="stylesheet" href="../../css/logado.css">
+        <link rel="stylesheet" href="../../css/browse.css">
+        <link rel="stylesheet" href="../../css/carousel.css">
+        <script src="../../js/libraries/jquery-3.3.1.js"></script>
+        <script src="../../js/carousel.js"></script>
+        <script src="../../js/movieCard.js"></script>
+        <script src='../../js/logado.js'></script>
+        <script src="../../js/browse.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <a href="."><img class="logo" src="../../images/index-logo.png" alt="logo-netflix"></a>
+            <div class="menu">
+                <a href="../browse">Início</a>
+                <a href="../browse">Séries</a>
+                <a href="../browse">Filmes</a>
+                <a href="../browse">Bombando</a>
+                <a href="../browse">Minha Lista</a>
+            </div>
+            <div class="dropdown">
+                <button type="image" class="dropbtn"></button>
+                <div class="dropdown-content" style="z-index: 3;">
+                  <a href="../alterarDados">Trocar cartão</a>
+                  <a href="../../php/logout.php">Sair</a>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="content">
+            <div class="movieCard">
+                <div class="movieImage" style="background-image: url('../../images/thumbnails/Matrix Reloaded.webp');"></div>
+                <div class="movieCardData">
+                <div class="movieCardButton">
+                    <div>
+                        <button class="bCircle"><i class="fa fa-play"></i></button>
+                        <button class="bCircle"><i class="fa fa-plus"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                    <button movieid="1" class="mudar bCircle bCircle-info"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="movieCardInfo">
+                    <p>
+                        <span class="relevancia">98%</span>
+                        <span>14</span>
+                        <span>2h 18min</span>
+                    </p>
+                    <p class="generos">
+                        <span>Ação e aventura</span> 
+                        &#8226;
+                        <span>Filmes de artes marciais</span>
+                        &#8226;
+                        <span>Ficção cientifica e fantasia</span>
+                    </p>
+                </div>
+                </div>
+            </div>
+
+            <div class="movieCard">
+                <div class="movieImage" style="background-image: url('../../images/thumbnails/Como Treinar o Seu Dragão 2.webp');"></div>
+                <div class="movieCardData">
+                <div class="movieCardButton">
+                    <div>
+                        <button class="bCircle"><i class="fa fa-play"></i></button>
+                        <button class="bCircle"><i class="fa fa-plus"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                    <button movieid="2" class="mudar bCircle bCircle-info"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="movieCardInfo">
+                    <p>
+                        <span class="relevancia">100%</span>
+                        <span>14</span>
+                        <span>1h 42min</span>
+                    </p>
+                    <p class="generos">
+                        <span>Filmes para toda a família</span>
+                        &#8226;
+                        <span>Filmes baseados em livros</span>
+                        &#8226;
+                        <span>Filmes para toda a família</span>
+                    </p>
+                </div>
+                </div>
+            </div>
+
+            <div class="movieCard">
+                <div class="movieImage" style="background-image: url('../../images/thumbnails/Velozes e Furiosos 7.webp');"></div>
+                <div class="movieCardData">
+                <div class="movieCardButton">
+                    <div>
+                        <button class="bCircle"><i class="fa fa-play"></i></button>
+                        <button class="bCircle"><i class="fa fa-plus"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                    <button movieid="3" class="mudar bCircle bCircle-info"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="movieCardInfo">
+                    <p>
+                        <span class="relevancia">98%</span>
+                        <span>14</span>
+                        <span>2h 17min</span>
+                    </p>
+                    <p class="generos">
+                        <span>Ação e aventura</span>
+                        &#8226;
+                        <span>Suspense de ação</span>
+                        &#8226;
+                        <span>Ação policial</span>
+                    </p>
+                </div>
+                </div>
+            </div>
+    
+            <div class="movieCard">
+                <div class="movieImage"></div>
+                <div class="movieCardData">
+                <div class="movieCardButton">
+                    <div>
+                        <button class="bCircle"><i class="fa fa-play"></i></button>
+                        <button class="bCircle"><i class="fa fa-plus"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                    <button movieid="4" class="mudar bCircle bCircle-info"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="movieCardInfo">
+                    <p>
+                        <span class="relevancia"></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                    <p class="generos">
+                        <span></span>
+                        &#8226;
+                        <span></span>
+                        &#8226;
+                        <span></span>
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+       
+        
+        <div class="movieInfo" style="display: none;">
+            <div class="teaser" id="">
+                <button class="fechar bCircle bClose"><i class="fas fa-times"></i></button>
+                <iframe class="ytplayer" width="975" height="525" title="YouTube video player" frameborder="0" allow="autoplay;"></iframe>
+                <img id="titulo">
+                <div class="movieControl">
+                    
+                    <div class="movieButtons">
+                        <button class="bPlay"><i class="fa fa-play"></i>Assistir</button>
+                        <button class="bCircle"><i class="fa fa-plus"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-up"></i></button>
+                        <button class="bCircle"><i class="fa fa-thumbs-down"></i></button>
+                    </div>
+                </div>
+                <div class="gradient"></div>
+            </div>
+            <div class="info">
+                <span id="titulo" name="titulo"></span>
+                <div class="info1">
+                    <div class="principal">
+                        <span class="relevancia" id="relevancia" name="relevancia"><!--RELEVANCIA--></span>
+                        <span id="ano" name="ano"><!--ANO--></span>
+                        <span id="classIndicativa" name="classIndicativa"><!--IDADE--></span>
+                        <span id="duracao" name="duracao"><!--DURACAO--></span>
+                    </div>
+    
+                    <span id="sinopse" name="sinopse"><!--SINOPSE--></span>
+    
+                </div>
+                <div class="info2">
+                    <p id="elenco" name="elenco"><!--ELENCO--></p>
+                    <p id="genero" name="genero"><span><!--GENERO--></p>
+                    <p id="cenas" name="cenas"><!--CENAS--></p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+
+</html>

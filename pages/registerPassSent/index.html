@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Netflix</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' href='../../css/patterns.css'>
+        <link rel='stylesheet' href='../../css/registerConf.css'>
+        <script src='../../js/libraries/jquery-3.3.1.js'></script>
+        <script src='../../js/changePass.js'></script>
+    </head>
+
+    <header>
+        <a href='../../index.html'><img src='../../images/index-logo.png'></a>
+        <div class="login">
+            <a class="login-btn" href='../login/index.html'> Entrar </a>
+        </div>
+    </header>
+    
+    <body>
+        <div class='content'>
+            <form id='form-register'>
+                <img class='tech' src='../../images/checkIcon.png'>
+                <p class='title'>Verifique o seu e-mail!</p>
+                <p class='subtitle'>Nós lhe enviamos um link para recuperar sua senha!</p>
+                <input placeholder='Digite o seu email novamente' type='text' name='email' id='email'/> <br>
+                <input placeholder='Digite o codigo de segurança' type='text' name='token' id='token'/> <br>
+                <input placeholder='Digite a sua nova senha' type='password' name='senha' id='senha'/> <br>
+                <input placeholder='Confirme a sua nova senha' type='password' name='senhaConf' id='senhaConf'/> <br>
+                <button id='bContinuar'>Alterar Senha</button>
+            </form>
+        </div>
+    </body>
+</html>
