@@ -2,6 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background-color: #141414;
+	overflow-x: hidden;
 }
 
 header {
@@ -14,7 +15,6 @@ header {
 }
 
 .content {
-  padding: 10px;
 }
 
 .content .movieCard{
@@ -92,6 +92,10 @@ a:link {
 
 a:visited {
   color: #e5e5e5;
+}
+
+.titulo {
+  color: white;
 }
 
 .movieInfo {

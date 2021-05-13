@@ -1,48 +1,71 @@
-$(document).ready(function() {
-    var carousel = $('.carousel');
-    var slider = $('.slider');
+$(document).ready(function(){
+	
+	var slider = $(".slider");
+	var content = $(".contentCarousel");
 
-    var prev = $(".prev")
-    var next = $('.next');
+	const prev = $(".prev");
+	const next = $(".next");
 
-    var direction;
+	$(prev).click(function(){
+		
+		content = $(this).parents(".contentCarousel");
+		slider = $(content).children(".slider");
 
-    next.click(function(){
-        direction = 1;
-        carousel.css('justifyContent', 'flex-end');
-        slider.css('transform', 'translate(-20%)');
-        
-    });
+		if($(content).css("justify-content") == "flex-start"){
 
-    prev.click(function(){
-        direction = -1;
-        carousel.css('justifyContent', 'flex-start');
-        slider.css('transform', 'translate(20%)');
-    });
+			var first = $(slider).children("section:first-child")
+			var last = $(slider).children("section:last-child")
+			$(first).insertAfter(last)
+		}
+		
+		$(content).css("justify-content", "flex-end");
+		$(slider).css("transform", "translate(20%)");
+		
+	});
+	
+	$(next).click(function(){
+		
+		content = $(this).parents(".contentCarousel");
+		slider = $(content).children(".slider");
 
-    slider.on('transitionend', function() {
+		if($(content).css("justify-content") == "flex-end"){
 
-        if(direction == -1) {
-            var primeiro = $(slider).children("section:first-child")
-        } else if (direction == 1) {
-            $(slider).prepend($("section:last-child"))
+			var first = $(slider).children("section:first-child")
+			var last = $(slider).children("section:last-child")
+			$(last).insertBefore(first)
+
+		}
+
+		$(content).css("justify-content", "flex-start");
+		$(slider).css("transform", "translate(-20%)");
+		//$(this).parents('.contentCarousel').children('.slider').css("transform", "translate(-20%)");
+		
+	});
+	
+	$(slider).on("transitionend", function(){
+		
+		var first = $(slider).children("section:first-child");
+		var last = $(slider).children("section:last-child");
+		
+        if($(content).css("justify-content") == "flex-end"){
+            $(last).insertBefore(first);
         }
-        
-        slider.append(primeiro);
-
-        slider.css('transition', 'none')
-        slider.css('transform', 'translate(0)')
-        setTimeout(function(){
-            slider.css('transition', 'all 0.5s')
-        }) 
-    })
+        if($(content).css("justify-content") == "flex-start"){
+            $(first).insertAfter(last);
+        }
+		
+		$(first).insertAfter(last)
+		
+		$(slider).css("transition", "none");
+		$(slider).css("transform", "translate(0)");
+		
+		setTimeout(function(){
+			$(slider).css("transition", "all .8s");
+		});
+	
+		
+	})
+	
 });
-
-
-
-
-
-
-
 
 
