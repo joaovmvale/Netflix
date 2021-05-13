@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $(".mudar").click(function(){
         fPreencher(this);
         fMudar();
@@ -15,16 +16,16 @@ var boo = false;
 function fMudar() {
     if(boo) {
         boo = false;
-        $(".movieInfo").css("display", "none");
+        $(".movieInfo-container").css("display", "none");
     } else {
         boo = true;
-        $(".movieInfo").css("display", "block");
-    }    
+        $(".movieInfo-container").css("display", "block");
+    }
 }
 
 function fFechar() {
     boo = false;
-    $(".movieInfo").css("display", "none");
+    $(".movieInfo-container").css("display", "none");
 }
 
 
