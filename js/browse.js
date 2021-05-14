@@ -10,7 +10,6 @@ $(document).ready(function(){
     })
 });
 
-
 var boo = false;
 
 function fMudar() {
@@ -39,6 +38,8 @@ function fPreencher(botao) {
             'id': $(botao).attr("movieid")
         }
     });
+
+
 
     $.when(row).then(function(filme){
         $(".teaser").css('background-image', "url('../../images/thumbnails/" + filme["titulo"] + ".jpg')");

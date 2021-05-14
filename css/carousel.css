@@ -43,13 +43,17 @@
 }
 
 .controls div {
-	font-size: 30px;
+	font-size: 50px;
 	height: 100%;
 	width: var(--btn-width);
 	background-color: #141414;
 	position: absolute;
 	cursor: pointer;
 	color: white;
+}
+
+.controls div:hover i {
+	display: block;
 }
 
 .controls div.prev {
@@ -61,6 +65,7 @@
 }
 
 .controls div i {
+	display: none;
 	position: absolute;
 	left: 50%;
 	top: 50%;

@@ -109,6 +109,11 @@ li {
   color: #fff;
 }
 
+.filme {
+  background-size: 100%; 
+  background-repeat: no-repeat;
+}
+
 .movieCard{
   float: left;
   z-index: 1;
@@ -173,10 +178,9 @@ li {
 .movieInfo {
   margin: auto;
   border-radius: 0.5%;
-  background-color: gray;
   width: 975px;
   height: 100%;
-  margin-top: 25px;
+  margin-top: 150px;
 }
 
 .teaser {
