@@ -9,10 +9,11 @@
 
     $_SESSION['mail'] = $email;
 
-    $continuar = mysqli_query($con, "SELECT * FROM usuarios_pendentes WHERE email = '$email'");
+    $continuar = mysqli_query($con, "SELECT * FROM usuarios_pendentes WHERE email = '$email' and senha = '$password'");
     $verificar = mysqli_query($con, "SELECT * FROM usuarios_pendentes WHERE email = '$email' AND ativado = '0'");
     $logar = mysqli_query($con, "SELECT * FROM usuarios WHERE cadMail = '$email' AND cadSenha = '$password'");
     $senhaErrada = mysqli_query($con, "SELECT * FROM usuarios WHERE cadMail = '$email'");
+    $senhaErradaP = mysqli_query($con, "SELECT * FROM usuarios_pendentes WHERE email = '$email' AND senha <> '$password'");
     $retorno["funcao"] = "login";
     if (mysqli_num_rows($verificar) > 0){
         $retorno["status"] = "verificar";
@@ -27,10 +28,11 @@
 
         $retorno["status"] = "logar";
         $retorno["mensagem"] = "Logado!";
-    }else if (mysqli_num_rows($senhaErrada) > 0){
+    }else if (mysqli_num_rows($senhaErrada) > 0 || mysqli_num_rows($senhaErradaP) > 0){
         $retorno["status"] = "senha";
         $retorno["mensagem"] = "Senha errada!";
-    }else if (mysqli_num_rows($continuar) == 0){
+    }
+    else if (mysqli_num_rows($continuar) == 0){
         $retorno["status"] = "cadastrar";
         $retorno["mensagem"] = "Email nao cadastrado";
     }else if (mysqli_num_rows($continuar) > 0){

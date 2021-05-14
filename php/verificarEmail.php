@@ -10,16 +10,16 @@
             $update = mysqli_query($con, "UPDATE usuarios_pendentes SET ativado = 1 WHERE vKey = '$vKey' LIMIT 1");
 
             if ($update) {
-                echo "Conta verificada, vamos prosseguir com o cadastro ;D";
+                header("Location: http://localhost/Netflix/pages/emailOk");
             }else{
-                echo "Opa, algo de errado não está certo! ;C";
+                header("Location: http://localhost/Netflix/pages/emailNok");
             }
 
         }else{
-            echo "Conta inválida ou já foi verificada ;S";
+            header("Location: http://localhost/Netflix/pages/emailNok");
         }
         
     }else{
-        die("Hmm, algo não deu certo :C");
+        header("Location: http://localhost/Netflix/pages/emailNok");
     }
 ?>
