@@ -13,16 +13,17 @@ function fMontaCard() {
             var cont = 0;
             for(i = 1; i <= 5; i++) {
                 for(j = 1; j <= 6; j++) {
-                    var filmeAtual = $("section:nth-child("+i+") div:nth-child("+j+")");
-                    filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.id[cont][1]+".webp')");
-                    filmeAtual.attr("movieid", retorno.id[cont][0]);
+                    var categoriaAtual = "#carolFilmes"
+                    var filmeAtual = $(categoriaAtual + " section:nth-child("+i+") div:nth-child("+j+")");
+                    if(cont < retorno.tamanhoFilmes) {
+                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.filmes[cont][1]+".webp')");
+                        filmeAtual.attr("movieid", retorno.filmes[cont][0]);
+                    }
                     cont++;
+                    filmeAtual.append(cont)
                 }
-
-                
-
             }
-            alert(retorno.id[0][0]);        
+            alert(retorno.filmes[0][0]);        
         } 
 
     });

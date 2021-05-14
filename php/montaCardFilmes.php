@@ -10,7 +10,7 @@
 
     $continuar = mysqli_query($con, "SELECT * FROM filmes");
     $row = mysqli_fetch_all($continuar);
-    $retorno["id"] = $row;
+    $retorno["filmes"] = $row;
 
     echo json_encode($retorno);
 
