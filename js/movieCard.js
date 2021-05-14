@@ -22,10 +22,8 @@ function fMontaCard() {
                     cont++;
                     filmeAtual.append(cont)
                 }
-            }
-            alert(retorno.filmes[0][0]);        
+            }     
         } 
-
     });
 }
 
