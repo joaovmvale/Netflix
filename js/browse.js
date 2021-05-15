@@ -8,7 +8,25 @@ $(document).ready(function(){
     $(".fechar").click(function(){
         fFechar()
     })
+
+    $("#addFav").click(function(){
+        fAddFav(this);
+    })
 });
+
+
+function fAddFav(botao) {
+
+        var row = $.ajax({
+            type:"POST",
+            dataType: "json",
+            url: "../../php/getInfoFilme.php",
+            data: {
+                'id': $(botao).attr("movieid")
+            }
+        });
+
+}
 
 var boo = false;
 
@@ -39,8 +57,6 @@ function fPreencher(botao) {
         }
     });
 
-
-
     $.when(row).then(function(filme){
         $(".teaser").css('background-image', "url('../../images/thumbnails/" + filme["titulo"] + ".jpg')");
         $("#titulo").attr("src", "../../images/titulos/" + filme["titulo"] + ".png");
@@ -52,6 +68,7 @@ function fPreencher(botao) {
         $("#genero").html("<span>Gêneros: </span>" + filme["genero"]);
         $("#cenas").html("<span>Cenas e Momentos: </span>" + filme["cenas"]);
         $(".ytplayer").attr("src", "https://www.youtube.com/embed/" + filme["trailer"]);
+        $("#addFav").attr("movieid", $(botao).attr("movieid"));
     })
 }
 

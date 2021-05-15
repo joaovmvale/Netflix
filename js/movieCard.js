@@ -18,6 +18,7 @@ function fMontaCard() {
                     if(cont < retorno.tamanhoFilmes) {
                         filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.filmes[cont][1]+".webp')");
                         filmeAtual.attr("movieid", retorno.filmes[cont][0]);
+
                     }
                     cont++;
                     filmeAtual.append(cont)
