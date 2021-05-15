@@ -16,8 +16,8 @@ function fMontaCard() {
                     var categoriaAtual = "#carolFilmes"
                     var filmeAtual = $(categoriaAtual + " section:nth-child("+i+") div:nth-child("+j+")");
                     if(cont < retorno.tamanhoFilmes) {
-                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.filmes[cont][1]+".webp')");
-                        filmeAtual.attr("movieid", retorno.filmes[cont][0]);
+                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.series[cont][1]+".webp')");
+                        filmeAtual.attr("movieid", retorno.series[cont][0]);
 
                     }
                     cont++;
@@ -27,4 +27,3 @@ function fMontaCard() {
         } 
     });
 }
-
