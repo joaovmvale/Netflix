@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../../css/alterarDados.css">
         <script src='../../js/libraries/jquery-3.3.1.js'></script>
         <script src='../../js/alterarDados.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     </head>
     <body>
         <header>
@@ -30,9 +31,9 @@
         </header>
 
         <form id="form-altCadastro">
-            <input placeholder='Digite o numero do cartao' type='text' name='cadNroCartao' id='cadNroCartao'/> <br>
-            <input placeholder='Digite a validade do cartao' type='text' name='cadVldCartao' id='cadVldCartao'/> <br>
-            <input placeholder='Digite o codigo de segurança do cartao' type='text' name='cadCodCartao' id='cadCodCartao'/> <br>
+            <input placeholder='Digite o numero do cartao' type='text' name='cadNroCartao' id='cadNroCartao' onkeypress="$(this).mask('0000 0000 0000 0000');"/> <br>
+            <input placeholder='Digite a validade do cartao' type='text' name='cadVldCartao' id='cadVldCartao' onkeypress="$(this).mask('00/0');"/> <br>
+            <input placeholder='Digite o codigo de segurança do cartao' type='text' name='cadCodCartao' id='cadCodCartao' onkeypress="$(this).mask('000');"/> <br>
             <input placeholder='Digite o nome que aparece no cartão' type='text' name='cadNomeCartao' id='cadNomeCartao'/> <br>
             <button id='bContinuar'>Alterar Dados</button>
         </form>

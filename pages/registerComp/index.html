@@ -10,6 +10,7 @@
         <script src='../../js/libraries/jquery-3.3.1.js'></script>
         <script src='../../js/libraries/sjcl.js'></script>
         <script src='../../js/registerComp.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     </head>
 
     <header>
@@ -27,10 +28,10 @@
                 <p class='title'>Complete o seu cadastro.</p>
                 <p class='subtitle'>Este é o útimo passo, lhe garantimos ;D</p>
                 <input placeholder='Digite o seu nome' type='text' name='name' id='name'/> <br>
-                <input placeholder='Digite sua data de nascimento' type='text' name='cadNasc' id='cadNasc'/> <br>
-                <input placeholder='Digite o numero do cartao' type='text' name='cadNroCartao' id='cadNroCartao'/> <br>
-                <input placeholder='Digite a validade do cartao' type='text' name='cadVldCartao' id='cadVldCartao'/> <br>
-                <input placeholder='Digite o codigo de segurança do cartão' type='text' name='cadCodCartao' id='cadCodCartao'/> <br>
+                <input placeholder='Digite sua data de nascimento' type='text' name='cadNasc' id='cadNasc' onkeypress="$(this).mask('00/00/0000');"/> <br>
+                <input placeholder='Digite o numero do cartao' type='text' name='cadNroCartao' id='cadNroCartao' onkeypress="$(this).mask('0000 0000 0000 0000');"/> <br>
+                <input placeholder='Digite a validade do cartao' type='text' name='cadVldCartao' id='cadVldCartao' onkeypress="$(this).mask('00/00');"/> <br>
+                <input placeholder='Digite o codigo de segurança do cartão' type='text' name='cadCodCartao' id='cadCodCartao' onkeypress="$(this).mask('000');"/> <br>
                 <input placeholder='Digite o nome presente no cartao' type='text' name='cadNomeCartao' id='cadNomeCartao'/> <br>
                 <input placeholder='Digite o CPF/CNPJ do titular do cartao' type='text' name='cadCpfCnpj' id='cadCpfCnpj'/> <br>
                 <button id='bContinuar'>Continuar</button>
