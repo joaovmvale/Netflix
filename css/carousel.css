@@ -1,5 +1,5 @@
 .carousel {
-    --crs-width-noPercent: 93;
+    --crs-width-noPercent: 92;
     --crs-width: calc(var(--crs-width-noPercent) * 1%);
     --btn-width: calc( (5000% - (50 * var(--crs-width))) / var(--crs-width-noPercent) );
     /* --btn-width: calc( ((100% - var(--crs-width-percent)) / 2) * (100 / var(--crs-width)) ); */

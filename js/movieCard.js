@@ -18,7 +18,7 @@ function fMontaCard() {
                     var categoriaAtual = "#carolFilmes"
                     var filmeAtual = $(categoriaAtual + " section:nth-child("+i+") div:nth-child("+j+")");
                     if(cont < retorno.tamanhoFilmes) {
-                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.filmes[cont][1]+".webp')");
+                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.filmes[cont][1]+".jpg')");
                         filmeAtual.attr("movieid", retorno.filmes[cont][0]);
 
                     }
@@ -33,7 +33,7 @@ function fMontaCard() {
                     var categoriaAtual = "#carolSeries"
                     var filmeAtual = $(categoriaAtual + " section:nth-child("+i+") div:nth-child("+j+")");
                     if(cont < retorno.tamanhoSeries) {
-                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.series[cont][1]+".webp')");
+                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.series[cont][1]+".jpg')");
                         filmeAtual.attr("movieid", retorno.series[cont][0]);
 
                     }
@@ -49,7 +49,7 @@ function fMontaCard() {
                     var categoriaAtual = "#carolFavoritos"
                     var filmeAtual = $(categoriaAtual + " section:nth-child("+i+") div:nth-child("+j+")");
                     if(cont < retorno.tamanhoFavoritos) {
-                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.favoritos[cont][1]+".webp')");
+                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.favoritos[cont][1]+".jpg')");
                         filmeAtual.attr("movieid", retorno.favoritos[cont][0]);
 
                     }

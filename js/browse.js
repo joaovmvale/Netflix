@@ -89,7 +89,7 @@ function fPreencher(botao) {
         $("#elenco").html("<span>Elenco: </span>" + filme["elenco"]);
         $("#genero").html("<span>Gêneros: </span>" + filme["genero"]);
         $("#cenas").html("<span>Cenas e Momentos: </span>" + filme["cenas"]);
-        $(".ytplayer").attr("src", "https://www.youtube.com/embed/" + filme["trailer"]);
+        $(".ytplayer").attr("src", "https://www.youtube-nocookie.com/embed/" + filme["trailer"] + "?controls=0&showinfo=0&autoplay=1&rel=0");
         $("#addFav").attr("movieid", $(botao).attr("movieid"));
     })
 }
