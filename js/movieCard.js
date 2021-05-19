@@ -23,7 +23,7 @@ function fMontaCard() {
 
                     }
                     cont++;
-                    filmeAtual.append(cont)
+                    //filmeAtual.append(cont)
                 }
             }   
 
@@ -38,7 +38,7 @@ function fMontaCard() {
 
                     }
                     cont++;
-                    filmeAtual.append(cont)
+                    //filmeAtual.append(cont)
                 }
             }   
 
@@ -54,7 +54,7 @@ function fMontaCard() {
 
                     }
                     cont++;
-                    filmeAtual.append(cont)
+                    //filmeAtual.append(cont)
                 }
             }   
 

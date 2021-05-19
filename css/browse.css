@@ -2,8 +2,8 @@ body {
   background-color: #141414;
 }
 
-.content .movieCard{
-  display: inline-block
+.content {
+  padding-top: 80px;
 }
 
 a {
@@ -22,21 +22,23 @@ li {
 
 header{
   width: 100%;
-  height: 4rem;
-  background-color: #14141475;
+  height: 80px;
+  background-color: black;
   display: flex;
+  position: fixed;
   position: sticky;
 }
 
 .menu{
-  margin-top: 1.3rem;
   margin-left: 5rem;
 }
 
 .menu a{
+  font-size: 16px;
   padding: 5px;
   color: white;
   text-decoration: none;
+  line-height: 80px;
 }
 
 .menu a:hover{
@@ -46,7 +48,13 @@ header{
 .logo-img{
   height: 50%;
   margin-top: 1rem;
-  margin-left: 1rem;
+  margin-left: 5rem;
+}
+
+.dropdown {
+  margin-top: 1rem;
+  margin-right: 8rem;
+  margin-left: auto;
 }
 
 .dropbtn {
@@ -55,12 +63,6 @@ header{
   padding: 20px;
   border: none;
   cursor: pointer;
-  }
-
-.dropdown {
-  margin-top: .75rem;
-  margin-right: 8rem;
-  margin-left: auto;
 }
 
 .dropdown-content {
@@ -87,7 +89,7 @@ header{
   display: block;
 }
 
-@media(max-width: 640px){
+@media(max-width: 900px){
   .logo-img{
       height: 30%;
   }
@@ -95,11 +97,17 @@ header{
   .menu{
       font-size: 10px;
       color: black;
+      padding-top: 30px;
   }
 
   .dropbtn{
       background-size: 25px;
       padding: 15px;
+  }
+
+  .menu a{
+    font-size: 14px;
+    line-height: 100%;
   }
 
   .dropdown-content {
@@ -138,8 +146,10 @@ header{
 }
 
 .filme {
-  background-size: 100%; 
+  background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
+  background-color: #202020;
 }
 
 .movieCard{
