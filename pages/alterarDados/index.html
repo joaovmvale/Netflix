@@ -13,17 +13,19 @@
     </head>
     <body>
         <header>
-            <a href="."><img class="logo" src="../../images/index-logo.png" alt="logo-netflix"></a>
+            <a href="."><img class="logo-img" src="../../IMAGES/index-logo.png" alt="logo-netflix"></a>
+            
             <div class="menu">
-                <a href="../browse">Início</a>
-                <a href="../browse">Séries</a>
-                <a href="../browse">Filmes</a>
-                <a href="../browse">Bombando</a>
-                <a href="../browse">Minha Lista</a>
+                <a class="inicio" href="../browse/">Início</a>
+                <a class="series" href="../browse/">Séries</a>
+                <a class="filmes" href="../browse/">Filmes</a>
+                <a class="trending" href="../browse/">Bombando</a>
+                <a href="">Minha Lista</a>
             </div>
+
             <div class="dropdown">
                 <button type="image" class="dropbtn"></button>
-                <div class="dropdown-content">
+                <div class="dropdown-content" style="z-index: 3;">
                   <a href="../alterarDados">Trocar cartão</a>
                   <a href="../../php/logout.php">Sair</a>
                 </div>
