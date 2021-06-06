@@ -136,7 +136,28 @@ header{
 
 .main-trailer {
   width: 100%;
-  height: 60px;
+  height: 850px;
+  position: absolute;
+  z-index: -3;
+}
+
+.main-trailer-iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.non-clickable{
+  width: 100%;
+  height: 720px;
+}
+
+.fade{
+  width: 100%;
+  height: 450px;
+  background-image: linear-gradient(to top, rgba(20, 20, 20,1), rgba(255, 255, 255, 0));
+  bottom: 0;
+  position: absolute;
 }
 
 .logo {
@@ -147,6 +168,7 @@ header{
 }
 
 .titulo {
+  position: relative;
   font-size: 26px;
   color: #E5E5E5;
   margin-left: 4%;

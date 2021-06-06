@@ -46,7 +46,6 @@
 	font-size: 50px;
 	height: 100%;
 	width: var(--btn-width);
-	background-color: #141414;
 	position: absolute;
 	cursor: pointer;
 	color: white;
