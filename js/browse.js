@@ -1,3 +1,5 @@
+var corBotao = "";
+
 $(document).ready(function(){
 
     $(".mudar").click(function(){
@@ -6,48 +8,33 @@ $(document).ready(function(){
     })
 
     $(".fechar").click(function(){
-        fFechar()
+        fFechar();
+        window.location.reload();
     })
 
     $("#addFav").click(function(){
         fAddFav(this);
     })
+
 });
 
 
 function fAddFav(botao) {
-
         var row = $.ajax({
             type:"POST",
             dataType: "json",
             url: "../../php/controlFavoritos.php",
             data: {
                 'id': $(botao).attr("movieid")
+            },
+            success: function(retorno){
+                if (retorno.verifica == "true"){
+                    $("#addFav").css('background-color', '');
+                } else {
+                    $("#addFav").css('background-color', 'green');
+                }
             }
         });
-
-        /*$.ajax({
-        type: "POST",
-        dataType: "json",
-        url: "../../php/montaCardFilmes.php",
-        success: function(retorno){
-            var cont = 0;
-            for(i = 1; i <= 5; i++) {
-                for(j = 1; j <= 6; j++) {
-                    var categoriaAtual = "#carolFilmes"
-                    var filmeAtual = $(categoriaAtual + " section:nth-child("+i+") div:nth-child("+j+")");
-                    if(cont < retorno.tamanhoFilmes) {
-                        filmeAtual.css("background-image", "url('../../images/thumbnails/"+retorno.filmes[cont][1]+".webp')");
-                        filmeAtual.attr("movieid", retorno.filmes[cont][0]);
-
-                    }
-                    cont++;
-                    filmeAtual.append(cont)
-                }
-            }     
-        } 
-    });*/
-
 }
 
 var boo = false;
@@ -69,13 +56,28 @@ function fFechar() {
 
 
 function fPreencher(botao) {
-
     var row = $.ajax({
         type:"POST",
         dataType: "json",
         url: "../../php/getInfoFilme.php",
         data: {
             'id': $(botao).attr("movieid")
+        }
+    });
+
+    var coloreBotao = $.ajax({
+        type:"POST",
+        dataType: "json",
+        url: "../../php/coloreBotaoFav.php",
+        data:{
+            'id': $(botao).attr("movieid")
+        },
+        success: function(retorno){
+            if (retorno.verifica == "true"){
+                corBotao = "green";
+            } else {
+                corBotao = "";
+            }
         }
     });
 
@@ -89,8 +91,8 @@ function fPreencher(botao) {
         $("#elenco").html("<span>Elenco: </span>" + filme["elenco"]);
         $("#genero").html("<span>Gêneros: </span>" + filme["genero"]);
         $("#cenas").html("<span>Cenas e Momentos: </span>" + filme["cenas"]);
-        $(".ytplayer").attr("src", "https://www.youtube-nocookie.com/embed/" + filme["trailer"] + "?controls=0&showinfo=0&autoplay=1&rel=0");
-        $("#addFav").attr("movieid", $(botao).attr("movieid"));
-    })
+        $(".ytplayer").attr("src", "https://www.youtube.com/embed/" + filme["trailer"] + "?controls=0&showinfo=0&autoplay=1&rel=0&autohide=1");
+        $("#addFav").attr("movieid", $(botao).attr("movieid")).css('background-color', corBotao);
+    });
+    
 }
-

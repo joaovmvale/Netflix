@@ -13,10 +13,8 @@
     $verificaFav = mysqli_query($con, "SELECT * FROM favoritos WHERE id_usuario = '$user_id' AND id_filme = '$filme_id'");
 
     if (mysqli_num_rows($verificaFav) > 0){
-        $remove_fav = mysqli_query($con, "DELETE FROM favoritos WHERE id_usuario = '$user_id' AND id_filme = '$filme_id'");
         $retorno["verifica"] = "true";
     } else if (mysqli_num_rows($verificaFav) == 0){
-        $insert_fav = mysqli_query($con, "INSERT INTO favoritos (id_usuario, id_filme) VALUES ('$user_id', '$filme_id')");
         $retorno["verifica"] = "false";
     }
 
