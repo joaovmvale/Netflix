@@ -94,5 +94,4 @@ function fPreencher(botao) {
         $(".ytplayer").attr("src", "https://www.youtube.com/embed/" + filme["trailer"] + "?controls=0&showinfo=0&autoplay=1&rel=0&autohide=1");
         $("#addFav").attr("movieid", $(botao).attr("movieid")).css('background-color', corBotao);
     });
-    
 }

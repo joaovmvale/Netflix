@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     fMontaCard();
+    
 });
 
 function fMontaCard() {
