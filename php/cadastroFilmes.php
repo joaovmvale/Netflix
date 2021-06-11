@@ -17,6 +17,7 @@
 
     if($query) {
         $retorno["mensagem"] = "Filme inserido com sucesso!";
+        $retorno["titulo"] = $titulo;
     } else {
         $retorno["mensagem"] = "Ocorreu um erro!";
     }
