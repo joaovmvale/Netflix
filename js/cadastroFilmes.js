@@ -8,22 +8,17 @@ $(document).ready(function(){
     
     $("#arquivo").change(function(){
         arquivo = document.getElementById("arquivo").files[0];
-
-        
         formData.append("file", arquivo);
     });
 
     $("#arquivo2").change(function(){
         arquivo = document.getElementById("arquivo2").files[0];
-
-        
         formData2.append("file", arquivo);
     });
 
     $("#bEnviar").click(function(){
 
         fLocalComunicaServidor("formAddFilme");
-        fSalvarFotos(titulo);
 
         return false;
     });
@@ -34,7 +29,6 @@ function fSalvarFotos(titulo) {
 
     formData.append("titulo", titulo)
     formData2.append("titulo", titulo)
-
 
     $.ajax({
         url: "../../php/uploadTitulo.php",
