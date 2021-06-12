@@ -327,7 +327,18 @@ body {
     margin-top: 8%;
     align-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgba(114, 106, 106, 0.452);
+    padding: 30px;
+    border-radius: 2%;
+    box-shadow: 0 0 10px rgb(112, 109, 109);
 }
+
+  #form-altCadastro p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+  }
 
   #form-altCadastro input{
     border-radius: 3px;
@@ -336,6 +347,7 @@ body {
     height: 20px;
     margin-bottom: 5px;
     padding: 20px;
+    outline: none;
 }
 
 #bContinuar {
