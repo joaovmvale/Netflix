@@ -4,10 +4,12 @@
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Netflix</title>
+        <link href="../../images/logo-mini.png" rel="icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <link rel='stylesheet' href='../../css/patterns.css'>
         <link rel="stylesheet" href="../../css/series.css">
         <script src="../../js/libraries/jquery-3.3.1.js"></script>
+        <script src="../../js/search.js"></script>
         <script src='../../js/logado.js'></script>
         <script src="../../js/filmes.js"></script>
         <script src="../../js/browse.js"></script>
@@ -25,6 +27,11 @@
                 <a class="trending" href=".">Bombando</a>
                 <a href="">Minha Lista</a>
             </div>
+
+            <form class="search">
+                <input id="ipt-search" type="text">
+                <button id="btn-search"><i class="fas fa-search"></i></button>
+            </form>
 
             <div class="dropdown">
                 <button type="image" class="dropbtn"></button>

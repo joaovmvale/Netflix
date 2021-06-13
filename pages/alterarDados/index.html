@@ -4,24 +4,31 @@
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Netflix</title>
+        <link href="../../images/logo-mini.png" rel="icon">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' href='../../css/patterns.css'>
         <link rel="stylesheet" href="../../css/alterarDados.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <script src='../../js/libraries/jquery-3.3.1.js'></script>
         <script src='../../js/alterarDados.js'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     </head>
     <body>
         <header>
-            <a href="."><img class="logo-img" src="../../IMAGES/index-logo.png" alt="logo-netflix"></a>
+            <a href="../browse"><img class="logo-img" src="../../IMAGES/index-logo.png" alt="logo-netflix"></a>
             
             <div class="menu">
                 <a class="inicio" href="../browse">Início</a>
                 <a class="series" href="../series">Séries</a>
                 <a class="filmes" href="../filmes">Filmes</a>
-                <a class="trending" href="../browse">Bombando</a>
+                <a class="trending" href=".">Bombando</a>
                 <a href="">Minha Lista</a>
             </div>
+
+            <form class="search">
+                <input id="ipt-search" type="text">
+                <button id="btn-search"><i class="fas fa-search"></i></button>
+            </form>
 
             <div class="dropdown">
                 <button type="image" class="dropbtn"></button>

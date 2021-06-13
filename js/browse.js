@@ -18,7 +18,6 @@ $(document).ready(function(){
 
 });
 
-
 function fAddFav(botao) {
         var row = $.ajax({
             type:"POST",

@@ -1,367 +1,157 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: #141414;
-  }
-  
-  /* HEADER JOAO */
-
-  header{
-    width: 100%;
-    height: 80px;
-    background-color: black;
-    display: flex;
-    position: fixed;
-    position: sticky;
-  }
-  
-  .menu{
-    margin-left: 5rem;
-  }
-  
-  .menu a{
-    font-size: 16px;
-    padding: 5px;
-    color: white;
-    text-decoration: none;
-    line-height: 80px;
-  }
-  
-  .menu a:hover{
-    color: #858585;
-  }
-  
-  .logo-img{
-    height: 50%;
-    margin-top: 1rem;
-    margin-left: 5rem;
-  }
-  
-  .dropdown {
-    margin-top: 1rem;
-    margin-right: 8rem;
-    margin-left: auto;
-  }
-  
-  .dropbtn {
-    background: url(../images/profile.jpg);
-    background-size: 40px;
-    padding: 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    margin-right: auto;
-    background-color: rgb(70, 67, 67);
-    min-width: 160px;
-    border: 1px solid gray;
-  }
-  
-  .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgba(211, 211, 211, 0.541);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  @media(max-width: 900px){
-    .logo-img{
-        height: 30%;
-    }
-  
-    .menu{
-        font-size: 10px;
-        color: black;
-        padding-top: 30px;
-    }
-  
-    .dropbtn{
-        background-size: 25px;
-        padding: 15px;
-    }
-  
-    .menu a{
-      font-size: 14px;
-      line-height: 100%;
-    }
-  
-    .dropdown-content {
-        min-width: 80px;
-    }
-  
-    .dropdown-content a {
-        padding: 6px 8px;
-        font-size: 10px;
-    }
-  }  
-  .movieCard{
-    position: relative;
-    width: 420px;
-    height: 375px;
-    background-color: red;
-    border-radius: 8px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.048)
-  }
-  
-  .movieCardData {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 170px;
-    background-color: #181818;
-    border-radius: 0 0 8px 8px;
-  }
-  
-  .movieCardButton {
-    padding: 18px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .movieCardInfo p{
-    margin: 0 0 20px 20px;
-  }
-  
-  .generos{
-    color: white;
-    font-size: 18px;
-  }
-  
-  li {
-    list-style-type: circle;
-  }
-  
-  .logo {
-    width: 92px;
-    align-self: center;
-    margin-top: 18px;
-    margin-right: 35px;
-  
-  }
-  
-  .menu {
-    align-self: center;
-  }
-  
-  a {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    padding: 6px;
-  }
-  
-  a:link {
-    color: #e5e5e5;
-  }
-  
-  a:visited {
-    color: #e5e5e5;
-  }
-  
-  button {
-    background-color: red;
-    border: none;
-    padding: 0;
-  }
-  
-  .movieInfo {
-    background-color: gray;
-    width: 975px;
-    height: 100%;
-    margin-top: 25px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 0.5%;
-  }
-  
-  .teaser {
-    background-color: #181818;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 525px;
-    border-radius: 0.5% 0.5% 0 0;
-    position: relative;
-  }
-  
-  .teaser img {
-    width: 375px;
-    margin-top: 260px;
-    margin-left: 40px;
-  }
-  
-  .buttonDiv {
-    position: absolute;
-    bottom: 0;
-    margin: 0 0 50px 50px;
-    z-index: 2;
-  }
-  
-  .buttonDiv i {
-    font-size: 20px;
-  }
-  
-  .bClose {
-    float: right;
-    margin: 25px;
-  }
-  
-  .bClose i {
-    font-size: 20px;
-  }
-  
-  .bPlay {
-    width: 175px;
-    height: 40px;
-    text-align: left;
-    font-size: 20px;
-    font-weight: 700px;
-    padding-left: 40px;
-    background-color: white;
-  }
-  
-  .bPlay:hover{
-    background-color: #E6E6E6;
-    cursor: pointer;
-  }
-  
-  .bPlay i {
-    margin-right: 15px;
-  }
-  
-  .bCircle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.300);
-    color: white;
-    border: 2px solid #93928F;
-  }
-  
-  .bCircle:hover {
-    border: 2px solid white;
-    cursor: pointer;
-  }
-  
-  
-  .gradient {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(rgba(255, 255, 255, 0), #181818);
-    position: absolute;
-    top: 100%;
-    transform: translateY(-100%);
-    z-index: 1;
-  }
-  
-  .info {
-    background-color: #181818;
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-content: space-around;
-    padding: 40px;
-    box-sizing: border-box;
-  }
-  
-  .info p, span {
-    color: white;
-  }
-  
-  .info1 {
-    font-weight: 500;
-    width: calc((100%/3)*2);
-    height: 100%;
-    font-size: 18px;
-    padding-right: 20px;
-  }
-  
-  .info1 div {
-    margin-bottom: 15px;
-  }
-  
-  .info2 {
-    font-weight: 500;
-    width: calc((100%/3));
-    height: 100%;
-    font-size: 14px;
-    display: inline;
-  }
-  
-  .info2 p:nth-child(1) {
-    margin-top: 0;
-  }
-  
-  .info2 span {
-    color: #777;
-    font-weight: 300;
-  }
-  
-  #relevancia {
-    color: #46d369;
-  }
-  
-  #sinopse {
-    line-height: 24px;
-    font-size: 20px;
-  }
-
-
-  #form-altCadastro {
-    width: 450px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 8%;
-    align-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    background-color: rgba(114, 106, 106, 0.452);
-    padding: 30px;
-    border-radius: 2%;
-    box-shadow: 0 0 10px rgb(112, 109, 109);
+  background-color: #141414;
 }
 
-  #form-altCadastro p{
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
+.content {
+  padding-top: 80px;
+}
+
+
+/* HEADER JOAO */
+
+header{
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.185);
+  display: flex;
+  position: fixed;
+  align-items: center;
+  z-index: 5;
+}
+
+.menu{
+  margin-left: 5rem;
+}
+
+.menu a{
+  font-size: 16px;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  line-height: 80px;
+}
+
+.menu a:hover{
+  color: #858585;
+}
+
+.logo-img{
+  height: 40px;
+  margin-left: 5rem;
+}
+
+.dropdown {
+  margin-right: 8rem;
+  margin-left: auto;
+}
+
+.dropbtn {
+  background: url(../images/profile.jpg);
+  background-size: 40px;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-right: auto;
+  background-color: rgb(70, 67, 67);
+  min-width: 160px;
+  border: 1px solid gray;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(211, 211, 211, 0.541);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media(max-width: 900px){
+  .logo-img{
+      height: 30%;
   }
 
-  #form-altCadastro input{
-    border-radius: 3px;
-    border: 1px solid darkgray;
-    width: 90%;
-    height: 20px;
-    margin-bottom: 5px;
-    padding: 20px;
-    outline: none;
+  .menu{
+      font-size: 10px;
+      color: black;
+      padding-top: 30px;
+  }
+
+  .dropbtn{
+      background-size: 25px;
+      padding: 15px;
+  }
+
+  .menu a{
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .dropdown-content {
+      min-width: 80px;
+  }
+
+  .dropdown-content a {
+      padding: 6px 8px;
+      font-size: 10px;
+  }
+}
+
+#form-altCadastro {
+  width: 450px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8%;
+  align-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: rgba(114, 106, 106, 0.452);
+  padding: 30px;
+  border-radius: 2%;
+  box-shadow: 0 0 10px rgb(112, 109, 109);
+}
+
+#form-altCadastro p{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#form-altCadastro input{
+  border-radius: 3px;
+  border: 1px solid darkgray;
+  width: 90%;
+  height: 20px;
+  margin-bottom: 5px;
+  padding: 20px;
+  outline: none;
 }
 
 #bContinuar {
-    width: 100%;
-    height: 54px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    background-color: red;
-    color: white;
-    margin-top: 10px;
+  width: 100%;
+  height: 54px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  margin-top: 10px;
 }
 
 #bContinuar:hover{
-    cursor: pointer;
+  cursor: pointer;
 }

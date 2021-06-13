@@ -4,16 +4,17 @@
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Netflix</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link href="../../images/logo-mini.png" rel="icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel='stylesheet' href='../../css/patterns.css'>
         <link rel="stylesheet" href="../../css/carousel.css">
         <link rel="stylesheet" href="../../css/browse.css">
         <script src="../../js/libraries/jquery-3.3.1.js"></script>
+        <script src="../../js/search.js"></script>
         <script src="../../js/movieCard.js"></script>
         <script src='../../js/logado.js'></script>
         <script src="../../js/browse.js"></script>
         <script src="../../js/carousel.js"></script>
-        
     </head>
 
     <body>
@@ -29,6 +30,11 @@
                 <a href="">Minha Lista</a>
             </div>
 
+            <form class="search">
+                <input id="ipt-search" type="text">
+                <button id="btn-search"><i class="fas fa-search"></i></button>
+            </form>
+
             <div class="dropdown">
                 <button type="image" class="dropbtn"></button>
                 <div class="dropdown-content" style="z-index: 3;">
@@ -41,7 +47,7 @@
         <div class="content">
 
             <div class="main-trailer">
-                <iframe class="main-trailer-iframe" src="https://www.youtube.com/embed/YYu_NIKpU-8?controls=0&showinfo=0&autoplay=1&rel=1&autohide=1"></iframe>
+                <iframe class="main-trailer-iframe" src="https://www.youtube.com/embed/YYu_NIKpU-8?controls=0&showinfo=0&autoplay=1&rel=1&autohide=1&loop=1"></iframe>
             </div>
 
             <div class="fade">

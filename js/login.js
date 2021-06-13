@@ -41,13 +41,12 @@ function fLocalComunicaServidor(formulario, arquivo){
                     window.location.href = "../browse";
                 }else if (retorno.status == "adm"){
 					alert(retorno.mensagem);
-					window.location.href = "../cadastrarFilme";
+					window.location.href = "../cadastroFilmes";
 				}else if (retorno.status == "senha"){
 					alert(retorno.mensagem);
 					window.location.reload();
 				}
 			}
 		}
-		
 	});
 }
