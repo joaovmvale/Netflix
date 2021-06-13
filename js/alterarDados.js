@@ -46,6 +46,5 @@ function fLocalComunicaServidor(formulario, arquivo){
 				window.location.href = "../browse";
 			}
 		}
-		
 	});
 }

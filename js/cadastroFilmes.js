@@ -17,9 +17,7 @@ $(document).ready(function(){
     });
 
     $("#bEnviar").click(function(){
-
         fLocalComunicaServidor("formAddFilme");
-
         return false;
     });
 
@@ -61,9 +59,7 @@ function fLocalComunicaServidor(form)
         success: function(retorno) {
             alert(retorno.mensagem);
             fSalvarFotos(retorno.titulo);
+            window.location.reload(true);
         }
-
     });  
 }
-
-

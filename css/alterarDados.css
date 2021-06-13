@@ -29,6 +29,7 @@ header{
   color: white;
   text-decoration: none;
   line-height: 80px;
+  font-weight: bold;
 }
 
 .menu a:hover{
