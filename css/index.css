@@ -99,22 +99,99 @@ header img {
     border-radius: 0px 2px 2px 0px; 
 }
 
-
 .info-box {
     width: 100%;
-    padding: 50px 375px 50px 375px;
+    height: 600px;
     background-color: black;
-    margin-top: 8px;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    border-top: 7px solid #222222;
 }
 
-.info-box div {
+.info-box .info-box-div {
+    position: relative;
     width: 30%;
+    margin: 5px;
 }
 
-.info-box img {
-    width: 520px;
+.info-box .media {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.info-box .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tv {
+    background-color: blue;
+    width: 100%;
+}
+
+.tvframe {
+    top: 35%;
+    width: 80%;
+    position: absolute;
+}
+
+.tvvideo {
+    top: 35%;
+    width: 60%;
+    position: absolute;
+}
+
+.mobile {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.stranger-dados {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+    display: flex;
+    width: 60%;
+    height: 15%;
+    align-items: center;
+    background-color: black;
+    border: 2px solid rgb(56, 56, 56);
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+.stranger-dados span {
+    color: #0071eb;
+}
+
+.device-pile {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.video-devices {
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.download {
+    height: 50%;
+}
+
+.boxshot {
+    height: 90%;
 }
 
 .info-titulo {
